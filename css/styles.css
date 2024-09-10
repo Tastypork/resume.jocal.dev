@@ -26,14 +26,13 @@
   height: 4px;
   border-bottom: 1px solid #888;
   width: 75%;
-  max-width: 100%;
 }
 .swiper-container-wrapper--timeline .swiper-pagination-progressbar-fill {
   background-color: #000;
   height: 3px;
   top: 2px;
 }
-.swiper-container-wrapper--timeline .swiper-pagination-progressbar:before {
+/* .swiper-container-wrapper--timeline .swiper-pagination-progressbar:before {
   position: absolute;
   top: 2px;
   left: -100%;
@@ -41,8 +40,8 @@
   height: 3px;
   background-color: #000;
   content: "";
-}
-.swiper-container-wrapper--timeline .swiper-pagination-progressbar:after {
+} */
+/* .swiper-container-wrapper--timeline .swiper-pagination-progressbar:after {
   position: absolute;
   top: 3px;
   right: -100%;
@@ -50,7 +49,7 @@
   height: 1px;
   background-color: #888;
   content: "";
-}
+} */
 .swiper-container-wrapper--timeline .swiper-pagination-custom {
   position: relative;
   list-style: none;
