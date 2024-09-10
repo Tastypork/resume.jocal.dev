@@ -20,19 +20,22 @@
   opacity: 1;
 }
 .swiper-container-wrapper--timeline .swiper-pagination-progressbar {
-  position: relative;
+  position: absolute; /* Position it outside of the normal document flow */
+  left: 0; /* Start at the far left of the page */
+  right: 0; /* Stretch to the far right of the page */
   margin-bottom: 70px;
   background-color: transparent;
   height: 4px;
   border-bottom: 1px solid #888;
-  width: 75%;
+  width: 100vw;
 }
 .swiper-container-wrapper--timeline .swiper-pagination-progressbar-fill {
   background-color: #000;
   height: 3px;
   top: 2px;
+  position: relative;
 }
-/* .swiper-container-wrapper--timeline .swiper-pagination-progressbar:before {
+.swiper-container-wrapper--timeline .swiper-pagination-progressbar:before {
   position: absolute;
   top: 2px;
   left: -100%;
@@ -40,8 +43,8 @@
   height: 3px;
   background-color: #000;
   content: "";
-} */
-/* .swiper-container-wrapper--timeline .swiper-pagination-progressbar:after {
+}
+.swiper-container-wrapper--timeline .swiper-pagination-progressbar:after {
   position: absolute;
   top: 3px;
   right: -100%;
@@ -49,7 +52,7 @@
   height: 1px;
   background-color: #888;
   content: "";
-} */
+}
 .swiper-container-wrapper--timeline .swiper-pagination-custom {
   position: relative;
   list-style: none;
@@ -151,4 +154,10 @@
   font-size: 16px;
 }
 
-/*# sourceMappingURL=styles.css.map */
+.pb-test {
+  position: relative;
+  width: 100vw; /* Full viewport width */
+  left: 50%; /* Move it halfway */
+  transform: translateX(-50%); /* Center the line relative to the page */
+  height: 4px; /* Adjust height if necessary */
+}
