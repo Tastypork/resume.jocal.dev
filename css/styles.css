@@ -35,7 +35,7 @@
   top: 2px;
   position: relative;
 }
-.swiper-container-wrapper--timeline .swiper-pagination-progressbar:before {
+/* .swiper-container-wrapper--timeline .swiper-pagination-progressbar:before {
   position: absolute;
   top: 2px;
   left: -100%;
@@ -52,7 +52,7 @@
   height: 1px;
   background-color: #888;
   content: "";
-}
+} */
 .swiper-container-wrapper--timeline .swiper-pagination-custom {
   position: relative;
   list-style: none;
