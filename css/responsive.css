@@ -154,10 +154,7 @@
     float: none;
     display: inline-block;
   }
-  .swiper-pagination-custom {
-    display: none !important;
-  }
-  .pb-test {
+  .swiper-container-wrapper--timeline {
     display: none;
   }
 }
