@@ -157,6 +157,9 @@
   .swiper-pagination-custom {
     display: none !important;
   }
+  .pb-test {
+    display: none;
+  }
 }
 
 /** Width between 600px to 0
