@@ -155,7 +155,7 @@
     display: inline-block;
   }
   .swiper-pagination-custom {
-    display: none;
+    display: none !important;
   }
 }
 
