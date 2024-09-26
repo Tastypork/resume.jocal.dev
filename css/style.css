@@ -195,9 +195,9 @@ nav {
 
 /* Styling for the left side */
 .navbar-left {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  padding-left: 50px;
+  padding-left: 0px;
   color: #333;
 }
 

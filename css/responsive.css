@@ -83,6 +83,10 @@
     float: none;
     display: inline-block;
   }
+  h3
+  {
+    font-size: 20px;
+  }
 }
 
 /** Width between 767px to 0
@@ -156,6 +160,10 @@
   }
   .swiper-container-wrapper--timeline {
     display: none;
+  }
+  h3
+  {
+    font-size: 18px;
   }
 }
 
