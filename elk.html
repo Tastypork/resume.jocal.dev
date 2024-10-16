@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- meta -->
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Real-Time Weather Data Ingestion and Visualization Using Python and ELK stack</title>
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
+  <link href="lib/hover/hover.min.css" rel="stylesheet">
+
+  <!-- Blog Stylesheet File -->
+  <link href="css/blog.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- Responsive css -->
+  <link href="css/responsive.css" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="images/favicon.png">
+</head>
+
+<body>
+
+  <!-- start section navbar -->
+  <nav id="main-nav-subpage" class="subpage-nav blog-nav">
+    <div class="row">
+      <div class="container">
+
+        <div class="logo">
+          <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+        </div>
+
+        <div class="responsive"><i data-icon="m" class="ion-navicon-round"></i></div>
+
+        <ul class="nav-menu list-unstyled">
+          <li><a href="index.html#journal" class="smoothScroll">Return Home</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- End section navbar -->
+  <!-- start section main content -->
+  <div class="main-content paddsection">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-12 col-md-offset-2">
+          <div class="row">
+            <div class="container-main single-main">
+              <div class="col-md-12">
+                <div class="block-main mb-30">
+                  <div class="image-cropper" style="height: 250px; width: 100%; overflow: hidden;">
+                    <img src="images/portfolio/5.jpg" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 45%;">
+                  </div>
+                  <div class="content-main single-post padDiv">
+                    <div class="journal-txt">
+                      <h3>Real-Time Weather Data Ingestion and Visualization Using Python and ELK stack</h3>
+                    </div>
+                    <div class="post-meta">
+                        <ul class="list-unstyled mb-0">
+                          <li class="author">by: Joshua O'Callaghan</li>
+                          <li class="date">date: October 15, 2024 8:00am MST</li>
+                        </ul>
+                      </div>
+                    
+                    <br>
+                    <p>
+                        <strong>Elasticsearch</strong> is an open-source, distributed search and analytics engine that allows for fast and scalable full-text search capabilities. Elasticsearch provides powerful indexing and searching capabilities and is often used for log and event data analysis, text search, and real-time analytics. Its architecture enables distributed data storage 
+                        and processing, which makes it suitable for handling large-scale datasets across multiple nodes.
+                    </p>
+                    <p>
+                        Elasticsearch supports <strong>RESTful APIs</strong>, making it straightforward to integrate with various data sources and programming languages. It uses <strong>JSON</strong> for storing documents, and its schema-free nature allows for flexible data modeling and quick indexing of complex data structures.
+                    </p>
+                    <p>
+                        The <strong>ELK stack</strong>—which stands for <strong>Elasticsearch</strong>, <strong>Logstash</strong>, and <strong>Kibana</strong>—is a powerful trio that provides a comprehensive solution for data ingestion, 
+                        processing, and visualization all which we touch on in this project.
+                    </p>
+                    <ul>
+                        <li><strong>Elasticsearch</strong> serves as the backbone, providing the search and storage capabilities for ingested data.</li>
+                        <li><strong>Logstash</strong> can be used for real-time data ingestion, filtering, and transformation before sending data to Elasticsearch.</li>
+                        <li><strong>Kibana</strong> is the visualization layer that allows users to create dashboards, graphs, and charts based on the indexed data in Elasticsearch.</li>
+                    </ul>
+                    <p>
+                        Together, these components provide a versatile, open-source solution for searching, logging, monitoring, and analyzing data. The stack is especially popular in use cases involving large datasets where real-time 
+                        analysis and insights are required.
+                    </p>
+                    <p>
+                        When compared to other databases and search engines, <strong>Elasticsearch</strong> stands out due to its unique set of features. Elasticsearch excels in speed, scalability, and full-text search capabilities, allowing for real-time analytics, flexible data modeling, and easy integration through its REST API. Its open-source nature and ecosystem of tools like Kibana and Logstash make it versatile for search and analytics tasks. However, it has drawbacks, including complex configuration, eventual consistency issues, resource-intensive operations, and limited support for complex transactional use cases compared to traditional relational databases. All of these critical components when choosing a backend for designing a new system.</p>
+                    
+                    <p>
+                        Elasticsearch and it's related software components have slowly but surely made their way into the corporate world over the last decade. Companies like <strong>American Express, Google, and Intel</strong> utilize Elasticsearch for various reasons, ranging from log analysis and monitoring to real-time analytics and search.
+                        Here are some reasons why these corporations might choose Elasticsearch:
+                    </p>
+                    <ol>
+                        <li><strong>Log and Event Data Analysis</strong>
+                            <ul>
+                                <li>Large enterprises generate massive volumes of log data from different services and applications. Elasticsearch is well-suited for log aggregation, searching, and alerting.</li>
+                                <li>With <strong>Kibana dashboards</strong>, companies can visualize log data in real-time, helping teams identify issues quickly and reduce downtime.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Fraud Detection and Anomaly Detection</strong>
+                            <ul>
+                                <li>Companies like <strong>American Express</strong> may use Elasticsearch for real-time fraud detection, where data from credit card transactions is analyzed for suspicious activity.</li>
+                                <li>Elasticsearch’s anomaly detection capabilities make it easier to identify unusual patterns in large datasets.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Monitoring and Observability</strong>
+                            <ul>
+                                <li><strong>Google</strong> or <strong>Intel</strong> may use Elasticsearch as part of their observability stack to monitor the health of their infrastructure. Tools like <strong>Metricbeat</strong> can collect 
+                                and index metrics from different services, while <strong>Kibana</strong> can provide a single-pane-of-glass view of the infrastructure.</li>
+                                <li>Elasticsearch’s ability to handle diverse data sources makes it ideal for multi-cloud and hybrid cloud monitoring.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Search-Based Applications</strong>
+                            <ul>
+                                <li>For companies providing large-scale web services, Elasticsearch powers <strong>search engines and auto-complete features</strong>, allowing for <strong>personalized search experiences</strong> based on 
+                                user behavior.</li>
+                                <li>Companies like <strong>Google</strong>, known for their search capabilities, can leverage Elasticsearch for internal search solutions or powering search features in their products.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Real-Time Data Analytics</strong>
+                            <ul>
+                                <li>Elasticsearch enables organizations to analyze data as it arrives, making it suitable for business intelligence, customer analytics, and operational monitoring.</li>
+                                <li><strong>American Express</strong>, for example, could use Elasticsearch to analyze real-time financial transactions, improving customer experience and reducing fraud.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <p>
+                        The combination of speed, scalability, full-text search capabilities, and a robust available ecosystem makes Elasticsearch an attractive choice for large corporations needing real-time data solutions. While it may not be suitable for every use case, it offers significant advantages in applications where search, logging, monitoring, and analytics are central.
+                    </p>
+                    <p>
+                        The goal of this project was to create a real-time weather data ingestion system using an Elasticsearch cluster for data indexing, Logstash & Python for data ingestion, and Kibana for data visualization. By setting up a multi-node Elasticsearch cluster, configuring secure communication with TLS/SSL, and using Kibana for monitoring and visualization, I aimed to build a robust and scalable solution. This document is a detailed account of my journey for purpose of recording challenges faced, and serving as a pillar for future improvements and replication.
+                    </p>
+
+                    <h3>Project Prerequisites</h3>
+                    <p>To successfully complete this project, I needed to ensure I had the right hardware, software, and tools in place. Here’s a list of prerequisites I considered before diving in:</p>
+
+                    <h5>System Requirements</h5>
+                    <ul>
+                        <li>Three separate VPS instances, each with the following specifications:</li>
+                        <ul>
+                            <li>4 CPU cores</li>
+                            <li>6 GB RAM</li>
+                            <li>400 GB SSD storage</li>
+                        </ul>
+                        <li>Ubuntu 22.04 LTS as the operating system for all nodes.</li>
+                        <li>I purchased my instances from Contabo but any CSP will suffice.</li>
+                    </ul>
+
+                    <h5>Software Requirements</h5>
+                    <ul>
+                        <li>Elasticsearch (v7.17.24) for the data storage and search engine.</li>
+                        <li>Kibana (v7.17.24) for visualizing the data.</li>
+                        <li>Python 3.x for writing the ingestion scripts.</li>
+                        <li>Metricbeat (v7.17.24) for monitoring the health of the cluster.</li>
+                        <li>Other tools installed included OpenSSL for certificate generation and curl for testing API endpoints.</li>
+                        <li>Installed Python libraries such as requests, elasticsearch, and schedule for fetching data, ingesting it into Elasticsearch, and automating the process.</li>
+                        <li>Basic knowledge of bash scripting was essential for setting up cron jobs, configuring services, and managing server settings.</li>
+                    </ul><br>
+
+                    <h3>Setting Up the Infrastructure</h3>
+                    <p>The first significant step was to set up the servers and ensure that they were ready to handle the components of my ELK stack. <h5>Provisioning VPS Instances</h5>
+                    <p>
+                        VPS provisioning is fairly straightforward. Unlike a Kubernetes cluster, which requires passwordless ssh to communicate between nodes, an Elasticsearch cluster communicates over HTTP protocols keeping machine setup rather simple. Once the instances were provisioned, they were loaded with the base software requirements and made sure that all packages were up to date.
+                    </p>
+                    <h5>Installing Elasticsearch, Logstash, and Kibana</h5>
+                    <p>
+                        The next step was to install Elasticsearch and Kibana. First I chose to install manually from source provided, but after some complications I settled and decided to use apt for installation as it was a much more straightforward process and ensured that I received the latest stable versions. Another option you could use here would be Docker containers which simplifies the process even more, but I wanted to build without the extra layer of virtualization so that I could learn a little bit more about the technologies as I went along.
+                    </p>
+                    # Adding the Elasticsearch APT repository:<br>
+                    <i>wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -<br>
+                    sudo apt-add-repository "deb https://artifacts.elastic.co/packages/7.x/apt stable main"</i><br><br>
+
+                    # Installing Elasticsearch, Logstash, and Kibana<br>
+                    <i> sudo apt install elasticsearch kibana logstash -y
+                    </i>
+                    <p>
+                        I also ensured that Python was installed by default and set up a virtual environment for my project to avoid conflicts with system-wide libraries.
+                    </p>
+
+                    <h3>Configuring the Elasticsearch Cluster</h3>
+                    <p>With Elasticsearch installed, I needed to configure the cluster for a multi-node setup to ensure scalability and high availability.</p>
+
+                    <h5>Single-Node vs. Multi-Node Setup</h5>
+                    <p>
+                        Initially, I considered a single-node setup for simplicity, but given the project's goals, a multi-node configuration was more appropriate. A multi-node setup enhances availability, fault tolerance, and scalability. If I were to opt for a single-node it would remove many of the qualities that makes Elasticsearch such a great product. 
+                    </p>
+
+                    <h5>Multi-Node Configuration Steps</h5>
+                    <p>
+                        I configured each node's elasticsearch.yml file with the following changes to enable discovery and clustering:
+                    </p>
+                    <i>cluster.name: my-weather-cluster<br>
+                    node.name: weather-node1<br>
+                    network.host: 0.0.0.0<br>
+                    discovery.seed_hosts: ["195.26.249.213", "209.145.52.134", "89.117.148.108"]<br>
+                    cluster.initial_master_nodes: ["weather-node1", "weather-node2", "weather-node3"]<br>
+                    </i>
+                    <p>
+                        I repeated similar configurations on the other nodes, changing the node.name for each instance. This configuration allows Elasticsearch to recognize all three nodes as part of the same cluster.
+                    </p>
+
+                    <h5>Configuring Software as a Service</h5>
+                    <p>
+                        To ensure the stack would start automatically on system reboot, it is important to set it up as a service on each VPS:
+                    </p>
+                        <i>
+                            sudo systemctl enable elasticsearch<br>
+                            sudo systemctl start elasticsearch<br>
+
+                            sudo systemctl enable logstash<br>
+                            sudo systemctl start logstash<br>
+
+                            sudo systemctl enable kibana<br>
+                            sudo systemctl start kibana<br><br>
+                        </i>
+
+                    <h5>JVM Heap Size Tuning</h5>
+                    <p>
+                        Typically, elasticsearch will manage memory on the systems automatically based on the limits. However, given the limited memory on each VPS (6 GB), I wanted to be safe and tuned the JVM heap size to ensure Elasticsearch had enough memory without causing the system to swap:
+                    </p>
+                    <i># In jvm.options file<br>
+                    -Xms3g<br>
+                    -Xmx3g
+                    </i>
+                    <p>This configuration reserved 3 GB of RAM for the Elasticsearch process.</p>
+
+                    <h5>Enabling Security with TLS/SSL</h5>
+                    <p>To ensure secure communication across the Elasticsearch cluster, I set up TLS/SSL for all nodes. While I touch a little bit more on TLS/SSL, this part can be a little bit tricky and I would highly recommend following the <a href="https://www.elastic.co/guide/en/elasticsearch/reference/7.17/security-basic-setup.html" target="_blank" style="color: blue;">  Elasticsearch documentation </a> for this part. </p>
+
+                    <h5>Generating Certificates</h5>
+                    <p>
+                        Using elasticsearch-certutil I generated a <strong>Certificate Authority (CA)</strong> and signed certificates for each node:
+                    </p>
+                    <i># Generate the CA <br>
+                    /usr/share/elasticsearch/bin/elasticsearch-certutil ca<br>
+
+                    # Generate node certificates<br>
+                    /usr/share/elasticsearch/bin/elasticsearch-certutil cert --ca elastic-stack-ca.p12
+                    </i><br><br>
+
+                    <h5>Configuring SSL in Elasticsearch</h5>
+                    <p>After generating the certificates, I configured each node's elasticsearch.yml to enable SSL:</p>
+                        <i>xpack.security.enabled: true<br>
+                        xpack.security.transport.ssl.enabled: true<br>
+                        xpack.security.transport.ssl.verification_mode: certificate<br>
+                        xpack.security.transport.ssl.keystore.path: /etc/elasticsearch/elastic-certificates.p12<br>
+                        xpack.security.transport.ssl.truststore.path: /etc/elasticsearch/elastic-certificates.p12<br>
+                        </i>
+                    <p>Restarting the Elasticsearch services on all the nodes is necessary here for the changes to take effect.</p>
+
+                    <h3>Setting Up Kibana for Visualization</h3>
+                    <p>With Elasticsearch configured and running, I proceeded to install and configure Kibana.</p>
+
+                    <h5>Configuring Kibana for SSL</h5>
+                    <p>
+                        I enabled SSL in kibana.yml and set up the encryption key:
+                    </p>
+                        <i>server.ssl.enabled: true <br>
+                        server.ssl.certificate: /path/to/kibana.crt<br>
+                        server.ssl.key: /path/to/kibana.key<br>
+                        xpack.encryptedSavedObjects.encryptionKey: "a-very-secure-32-character-string"</i><br>
+                    <p>This ensured that all communication between the browser and Kibana was encrypted.</p>
+
+                    <h5>Connecting Kibana to the Elasticsearch Cluster</h5><br>
+                    <i>elasticsearch.hosts: ["https://localhost:9200"]<br>
+                    elasticsearch.ssl.certificateAuthorities: ["/path/to/new-ca.pem"]<br>
+                    elasticsearch.username: "elastic"<br>
+                    elasticsearch.password: "your_elastic_password"</i><br><br>
+
+                    <h5>Verifying Kibana Functionality</h5>
+                    <p>I tested Kibana by accessing <i>https://&lt;server-ip&gt;:5601</i> in the browser. Once I could see the login prompt, I knew the configuration was correct.</p>
+
+
+                    <h3>Writing the Python Script for Real-Time Weather Data Ingestion</h3>
+                    <p>
+                        With Elasticsearch and Kibana in place, the next step was setting up data ingestion. I created a Python script called <code>weather_data.py</code> to fetch real-time weather data from an external API. The script was designed to extract temperature, humidity, pressure, and coordinates, and then send the data to Elasticsearch.
+                    </p>
+
+                    <img src="images/weatherpy_snippet.jpg" style="width: 100%;"><br><br><br>
+
+                    <h5>Configuring Data Indexing and Mapping</h5>
+                    <p>When taking a look at the data I noticed that some of the data types had gotten imported incorrectly. Fortunately a quick mapping was able to rectify the situation</p>
+
+                    <i>curl -X PUT "https://localhost:9200/weather_data" -H 'Content-Type: application/json' -d '{ <br>
+                    "mappings": {<br>
+                        "properties": {<br>
+                        "timestamp": { "type": "date" },<br>
+                        "temperature": { "type": "float" },<br>
+                        "humidity": { "type": "float" },<br>
+                        "geo_location": { "type": "geo_point" }<br>
+                        }<br>
+                    }<br>
+                    }'<br><br></i>
+
+                    <h5>Automating Data Ingestion Using Cron</h5>
+                    <p>I initially used cron to run the script every two minutes:</p>
+                    <i>*/2 * * * * /usr/bin/python3 /home/node1/weather_data.py >> /var/log/cron_log.log 2>&1</i>
+                    <p>
+                        While cron worked well for basic automation, I decided to transition to <strong>Logstash</strong> to take advantage of its more powerful data ingestion capabilities. 
+                        Once I finalized the script and data ingestion plan, I set up Logstash to replace cron for ingesting weather data into Elasticsearch.
+                    </p>
+
+                    <h5>Configuring and Using Logstash</h5>
+                    <p>
+                        After finalizing my script, I installed Logstash and configured it to handle the ingestion process. This allowed for more flexibility in data processing and made it easier to handle ingestion and for the future errors, transformations, and indexing as well.
+                    </p>
+                    <ol>
+                        <li>
+                            <strong>Configuring Logstash:</strong> I created a Logstash configuration file to define the data ingestion pipeline. This file specified the input source (Python script output), 
+                            filters (if needed), and output destination (Elasticsearch).
+                            <i><br><br>
+                            # /etc/logstash/conf.d/weather_data.conf<br>
+                            input {<br>
+                                exec {<br>
+                                    command => "python3 /home/node1/weather_data.py"<br>
+                                    interval => 120<br>
+                                    codec => "json"<br>
+                                }<br>
+                            }<br>
+
+                            output {<br>
+                                elasticsearch {<br>
+                                    hosts => ["https://localhost:9200"]<br>
+                                    index => "weather_data"<br>
+                                    user => "elastic"<br>
+                                    password => "your_elastic_password"<br>
+                                    ssl => true<br>
+                                    cacert => "/etc/elasticsearch/elastic-certificate-ca.pem"<br>
+                                }<br>
+                            }<br>
+                            </i>
+                            <p>This configuration runs the Python script every 120 seconds, ingests the JSON output, and sends it to the weather_data index in Elasticsearch.</p>
+                        </li>
+                        <li>
+                            <strong>Testing the Logstash Configuration:</strong> I tested the Logstash setup to ensure it could successfully ingest data:
+                            <br><i>sudo /usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/weather_data.conf --config.test_and_exit</i>
+                            <p>If there were no errors, I started the Logstash service</p>
+                        </li>
+                            <p>Once Logstash was successfully configured, I disabled the cron job to avoid duplicate data ingestion.</p>
+                    </ol>
+                    <p>
+                        By switching to Logstash, I gained more control over the ingestion process, allowing me to apply transformations, error handling, and fine-tuned configuration for indexing data in Elasticsearch.
+                    </p>
+
+                    <p> Finally with everything in place I was able to dive in to Kibana and taste what it had to offer in terms of visualizations. The dashboard I created had 5 different visualizations:</p>
+
+                    <h5>The Five Visualizations</h5>
+
+                    <ol>
+                        <li>
+                            <strong>Average Temperature Over Time:</strong> This line chart shows the average temperature for each location over time, allowing for quick identification of trends or anomalies 
+                            in temperature across different cities.
+                        </li><br>
+                        <li>
+                            <strong>Geographic Distribution of Weather Conditions:</strong> A map visualization that uses geo-location data to display the locations being tracked. 
+                            Color-coded markers indicate the current weather conditions for each location.
+                        </li><br>
+                        <li>
+                            <strong>Humidity Levels Across Locations:</strong> A bar chart that compares the humidity levels across the different cities being monitored, helping to visualize areas with 
+                            higher or lower humidity at a glance.
+                        </li><br>
+                        <li>
+                            <strong>Temperature Distribution Histogram:</strong> This histogram displays the distribution of temperature values recorded across all locations, 
+                            highlighting the most common temperature ranges.
+                        </li><br>
+                        <li>
+                            <strong>Pressure Trends by Location:</strong> A line chart that shows changes in atmospheric pressure for each city over time, which can be useful for detecting weather pattern changes.
+                        </li>
+                    </ol>
+                    <br><br>
+
+
+                    <div style="text-align: center;">
+                        <iframe src="https://elastic.jocal.dev:5601/app/dashboards#/view/7dc81d80-8b86-11ef-a4b4-31d06fc56f71?embed=true&_g=(filters%3A!())&hide-filter-bar=true" height="600" width="100%"></iframe>
+                        <!-- <br><b>Username:</b> visitor <b>Password:</b> long_password_is_safe_password -->
+                    </div>
+                    <br><br>
+                    
+
+                    <h3>Challenges & Final Notations</h3>
+                    <p>This project presented several challenges. Primarily was just system configuration issues. A problem that i kept running into was insufficient permissions for the software to use keys or files because the environments were installed in the /etc directory. In the future to overcome this I would probably go for manual installation so that I would not have to work out of sudo so much. Another issue that I ran in to that was not particularly mentioned above was obtaining API data. I needed quick access to reliable data via an API and many companies were restricting their data. Lucky I did find the weather data through OpenWeather which was very simple to ingest data. </p>
+
+                    <p>
+                        Overall the project was a rewarding experience that demonstrated the power of the ELK stack for real-time data processing and visualization. With the multi-node Elasticsearch cluster, secure TLS/SSL setup, and comprehensive data ingestion, I was able to build a scalable and robust system.
+
+                        If I were to do it again, these pieces of information that I collected on the way would enable me to do this almost twice as fast.
+
+                        There are plenty of ways to expand and improve the system further, including adding more data sources or integrating advanced machine learning features in Elasticsearch. In the future I plan on integrating more tools with the stack and using the power of Kibana to make more intriguing visualizations.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="cmt padDiv">
+                  <form name="contact" method="POST" role="form" netlify action="/thank-you">
+                    
+                    <h4>Questions or Comments?</h4>
+                    <p class="mb-30">Leave a message below with your email or anonymously!<br></p>
+                    <div class="row">
+                        <div class="col-lg-6">
+                          <div class="form-group">
+                            <input id="form_name" type="text" name="name" class="form-control" placeholder="Name (Optional)">
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-group">
+                            <input id="form_email"name="email" type="email" name="email" class="form-control" placeholder="Email (Optional)">
+                          </div>
+                        </div>
+                        <div class="col-lg-12">
+                          <div class="form-group">
+                            <textarea id="form_message" name="message" class="form-control" placeholder="Message *" style="height: 200px;" required="required"></textarea>
+                          </div>
+                        </div>
+                        <div class="col-lg-12">
+                          <input type="submit" class="btn btn-defeault btn-send" value="Send message">
+                        </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/typed/typed.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/magnific-popup/magnific-popup.min.js"></script>
+  <script src="lib/isotope/isotope.pkgd.min.js"></script>
+
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
