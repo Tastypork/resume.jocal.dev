@@ -787,3 +787,14 @@ nav ul li a {
   font-size: 14px;
   border-radius: 3px;
 }
+
+@keyframes fadeBlink {
+  0%, 100% { box-shadow: 0 -10px 20px yellow, 0 -10px 30px yellow; opacity: 1; }
+  50% { box-shadow: 0 -10px 20px transparent, 0 -10px 30px transparent; opacity: .9; }
+}
+
+.blink-effect {
+  animation: fadeBlink 4s infinite;
+}
+
+

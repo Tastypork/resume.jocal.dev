@@ -247,3 +247,8 @@ document.addEventListener("DOMContentLoaded", function () {
   // Initial check when the page loads
   checkForArrowDisplay();
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  const resumeLink = document.querySelector(".list-social li:nth-child(3) a");
+  resumeLink.classList.add("blink-effect");
+});
