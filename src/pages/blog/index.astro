@@ -1,0 +1,14 @@
+---
+import LegacyLayout from "../../layouts/LegacyLayout.astro";
+import blogIndexBody from "../../legacy/blog-index-body.html?raw";
+---
+
+<LegacyLayout
+  title="CrossWords Blog"
+  description="Come check out some thoughts on biblically related topics."
+  canonicalPath="/blog"
+  headVariant="bloglist"
+  ogImage="https://jocal.dev/images/CrossWords/cw-bg-embed.jpg"
+>
+  <div style="display:contents" set:html={blogIndexBody} />
+</LegacyLayout>

@@ -1,0 +1,14 @@
+---
+import LegacyLayout from "../layouts/LegacyLayout.astro";
+import homeBody from "../legacy/home-body.html?raw";
+---
+
+<LegacyLayout
+  title="Joshua O'Callaghan"
+  description="Joshua O'Callaghan — developer, engineer, innovator."
+  canonicalPath="/"
+  headVariant="home"
+  ogImage="https://jocal.dev/images/embed.jpg"
+>
+  <div style="display:contents" set:html={homeBody} />
+</LegacyLayout>

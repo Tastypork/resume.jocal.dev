@@ -1,0 +1,13 @@
+---
+import LegacyLayout from "../layouts/LegacyLayout.astro";
+import aboutBody from "../legacy/about-body.html?raw";
+---
+
+<LegacyLayout
+  title="About | Joshua O'Callaghan"
+  description="About Joshua O'Callaghan, cloud software engineer."
+  canonicalPath="/about"
+  headVariant="article"
+>
+  <div style="display:contents" set:html={aboutBody} />
+</LegacyLayout>

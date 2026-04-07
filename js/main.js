@@ -87,6 +87,9 @@ $(document).ready(function() {
   // var typed = $(".typed");
 
   $(function() {
+    if (!$('.typed').length) {
+      return;
+    }
     var typed = new Typed('.typed', {
       strings: ["Engineer.", "Leader.", "Creator.", "Analyst.", "Problem Solver.", "Joshua O'Callaghan"],
       typeSpeed: 100,
@@ -104,7 +107,8 @@ $(document).ready(function() {
   // ========================================================================= //
 
 
-  $('.services-carousel').owlCarousel({
+  if ($('.services-carousel').length) {
+    $('.services-carousel').owlCarousel({
       autoplay: true,
       loop: true,
       margin: 20,
@@ -113,6 +117,7 @@ $(document).ready(function() {
       responsiveClass: true,
       responsive: { 0: { items: 1 }, 768: { items: 2 }, 900: { items: 4 } }
     });
+  }
 
   // ========================================================================= //
   //  magnificPopup
@@ -145,48 +150,51 @@ $(document).ready(function() {
   };
 
 
-  // Call the functions
-  magnifPopup();
+  if ($('.popup-img').length) {
+    magnifPopup();
+  }
 
 // ========================================================================= //
 //  Timeline
 // ========================================================================= //
 
-  var mySwiper = new Swiper(".swiper", {
-    autoHeight: true,
-    autoplay: {
-      delay: 10000,
-      disableOnInteraction: false
-    },
-    speed: 500,
-    direction: "horizontal",
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev"
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      type: "progressbar"
-    },
-    loop: false,
-    effect: "slide",
-    spaceBetween: 30,
-    on: {
-      init: function () {
-        $(".swiper-pagination-custom .swiper-pagination-switch").removeClass("active");
-        $(".swiper-pagination-custom .swiper-pagination-switch").eq(0).addClass("active");
+  if (typeof Swiper !== "undefined" && document.querySelector(".swiper")) {
+    var mySwiper = new Swiper(".swiper", {
+      autoHeight: true,
+      autoplay: {
+        delay: 10000,
+        disableOnInteraction: false
       },
-      slideChangeTransitionStart: function () {
-        $(".swiper-pagination-custom .swiper-pagination-switch").removeClass("active");
-        $(".swiper-pagination-custom .swiper-pagination-switch").eq(mySwiper.realIndex).addClass("active");
+      speed: 500,
+      direction: "horizontal",
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        type: "progressbar"
+      },
+      loop: false,
+      effect: "slide",
+      spaceBetween: 30,
+      on: {
+        init: function () {
+          $(".swiper-pagination-custom .swiper-pagination-switch").removeClass("active");
+          $(".swiper-pagination-custom .swiper-pagination-switch").eq(0).addClass("active");
+        },
+        slideChangeTransitionStart: function () {
+          $(".swiper-pagination-custom .swiper-pagination-switch").removeClass("active");
+          $(".swiper-pagination-custom .swiper-pagination-switch").eq(mySwiper.realIndex).addClass("active");
+        }
       }
-    }
-  });
-  $(".swiper-pagination-custom .swiper-pagination-switch").click(function () {
-    mySwiper.slideTo($(this).index());
-    $(".swiper-pagination-custom .swiper-pagination-switch").removeClass("active");
-    $(this).addClass("active");
-  });
+    });
+    $(".swiper-pagination-custom .swiper-pagination-switch").click(function () {
+      mySwiper.slideTo($(this).index());
+      $(".swiper-pagination-custom .swiper-pagination-switch").removeClass("active");
+      $(this).addClass("active");
+    });
+  }
 
 });
 
@@ -195,6 +203,9 @@ $(document).ready(function() {
 // ========================================================================= //
 $(window).load(function(){
 
+  if (!$('.portfolio-container').length) {
+    return;
+  }
   var portfolioIsotope = $('.portfolio-container').isotope({
     itemSelector: '.portfolio-thumbnail',
     layoutMode: 'fitRows'
@@ -215,6 +226,9 @@ $(window).load(function(){
 
 document.addEventListener("DOMContentLoaded", function () {
   let arrow = document.querySelector('.arrow');
+  if (!arrow) {
+    return;
+  }
   let timeout;
 
   // Function to show the arrow
@@ -250,5 +264,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function() {
   const resumeLink = document.querySelector(".list-social li:nth-child(3) a");
-  resumeLink.classList.add("blink-effect");
+  if (resumeLink) {
+    resumeLink.classList.add("blink-effect");
+  }
 });

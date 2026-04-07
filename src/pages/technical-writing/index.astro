@@ -1,0 +1,13 @@
+---
+import LegacyLayout from "../../layouts/LegacyLayout.astro";
+import portfolioBody from "../../legacy/technical-writing-index-body.html?raw";
+---
+
+<LegacyLayout
+  title="Technical Writing | Joshua O'Callaghan"
+  description="Technical writing and portfolio pieces."
+  canonicalPath="/technical-writing"
+  headVariant="article"
+>
+  <div style="display:contents" set:html={portfolioBody} />
+</LegacyLayout>
