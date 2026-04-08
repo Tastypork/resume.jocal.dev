@@ -1,6 +1,23 @@
 jQuery(document).ready(function($) {
   "use strict";
 
+  function showFormNotice(form, message, isError) {
+    var notice = form.find('.form-notice');
+    if (!notice.length) {
+      notice = $('<div class="form-notice"></div>');
+      notice.css({
+        marginTop: '12px',
+        fontSize: '13px'
+      });
+      form.append(notice);
+    }
+
+    notice
+      .text(message)
+      .css('color', isError ? '#d9534f' : '#3c763d')
+      .show();
+  }
+
   //Contact
   $('form.contactForm').submit(function() {
     var f = $(this).find('.form-group'),
@@ -94,22 +111,22 @@ jQuery(document).ready(function($) {
     if( ! action ) {
       action = 'contactform/contactform.php';
     }
+    var form = $(this);
     $.ajax({
       type: "POST",
       url: action,
       data: str,
-      success: function(msg) {
-        // alert(msg);
-        if (msg == 'OK') {
-          $("#sendmessage").addClass("show");
-          $("#errormessage").removeClass("show");
-          $('.contactForm').find("input, textarea").val("");
-        } else {
-          $("#sendmessage").removeClass("show");
-          $("#errormessage").addClass("show");
-          $('#errormessage').html(msg);
-        }
-
+      success: function() {
+        $("#sendmessage").addClass("show");
+        $("#errormessage").removeClass("show");
+        form.find("input, textarea").val("");
+        showFormNotice(form, "Thanks! Your message has been sent.", false);
+      },
+      error: function() {
+        $("#sendmessage").removeClass("show");
+        $("#errormessage").addClass("show");
+        $('#errormessage').html("There was a problem sending your message. Please try again.");
+        showFormNotice(form, "Could not send message. Please try again.", true);
       }
     });
     return false;
